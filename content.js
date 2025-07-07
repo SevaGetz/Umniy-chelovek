@@ -56,7 +56,7 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
   }
 });
 
-document.querySelectorAll('ytd-channel-name, a.yt-simple-endpoint.style-scope.yt-formatted-string').forEach(channel => {
+document.querySelectorAll('ytd-channel-name').forEach(channel => {
   if (channel.textContent) {
     channel.textContent = 'Умный человек';
   }
