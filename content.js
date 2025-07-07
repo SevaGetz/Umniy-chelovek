@@ -55,3 +55,9 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
     replaceImagesIfEnabled();
   }
 });
+
+document.querySelectorAll('ytd-channel-name, a.yt-simple-endpoint.style-scope.yt-formatted-string').forEach(channel => {
+  if (channel.textContent) {
+    channel.textContent = 'Умный человек';
+  }
+});
