@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Умный человек в очках скачать обои YouTube",
+  "version": "1.0",
+  "description": "Заменяет все превью и аватарки YouTube на умный человек в очках скачать обои",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "src/icon16.png",
+      "48": "src/icon48.png",
+      "128": "src/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/thumbnail.jpg", "src/avatar.jpg"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
